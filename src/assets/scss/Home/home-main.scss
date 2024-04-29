@@ -1,0 +1,1147 @@
+.jumbo-tron {
+    .carousell {
+        z-index: 0;
+        position: relative;
+        width: 100%;
+        height: 750px;
+        img {
+            z-index: 0;
+            top: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 0 60%;
+            filter: contrast(1.7);
+            filter: saturate(0.5);
+            transition: opacity 0.5s ease;
+        }
+        .color-layer {
+            position: absolute;
+            z-index: 2;
+            background-color: #0f1f2acb;
+            background-blend-mode: multiply;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+/* Regole CSS per dispositivi con larghezza massima di 600px */
+@media only screen and (max-width: 600px) {
+    .bottom-main {
+        margin-top: 80px;
+        .restaurant-result {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+            align-items: center;
+            margin: 0 auto;
+            margin-bottom: 100px;
+            max-width: 85%;
+            .mycardcontainer {
+                width: 100%;
+                margin: 0 8px;
+                margin-bottom: 30px;
+                .myrestaurantcard {
+                    position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                    &:hover img {
+                        transform: scale(1.1);
+                        background: linear-gradient(
+                            to top,
+                            rgba(0, 0, 0, 0.825),
+                            rgba(0, 0, 0, 0)
+                        );
+                    }
+                    &:hover h2 {
+                        display: none;
+                    }
+                    .myrestaurantimg {
+                        border-radius: 25px;
+                        position: relative;
+                        overflow: hidden;
+                        width: 100%;
+                        height: 200px;
+                        margin-bottom: 8px;
+                        .color-layer {
+                            position: absolute;
+                            bottom: 0;
+                            top: 0;
+                            width: 100%;
+                            background: linear-gradient(
+                                to top,
+                                rgba(0, 0, 0, 0.825),
+                                rgba(0, 0, 0, 0)
+                            );
+                        }
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                            transition: all 0.5s ease-in;
+                            transition: all 0.2s ease-out;
+                        }
+                    }
+                    .myrestaurantcardbody {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        padding: 16px;
+
+                        h2 {
+                            color: white;
+                            font-size: 1.6rem;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            transition: all 0.3s ease-in-out;
+                        }
+
+                        span {
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            font-size: 0.8rem;
+                            color: white;
+                        }
+                    }
+                }
+
+                .typology-tag {
+                    text-align: end;
+                    span {
+                        font-size: 0.8rem;
+                        padding: 4px 8px;
+                        border-radius: 16px;
+                        background-color: #4e5253;
+                        color: white;
+                        margin: 0 4px;
+                    }
+                }
+            }
+
+            .no-restaurants-found {
+                width: 100%;
+                text-align: center;
+                h3 {
+                    font-weight: 400;
+                    color: #b1b1b1;
+                }
+            }
+
+            .buttons-container {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                button {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 20px;
+                    background-color: transparent;
+                    border: 1px solid rgb(22, 22, 33);
+                    margin: 0 8px;
+                    font-weight: bolder;
+                    font-size: 1.1rem;
+                    transition: all 0.2s ease-in-out;
+                    &.enable {
+                        background-color: rgb(22, 22, 33);
+                        color: white;
+                    }
+                    &.hidden {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        margin-bottom: 220px;
+        .bg {
+            background-color: #2c2f30;
+            .my-container {
+                max-width: 80%;
+                margin: 0 auto;
+                .row {
+                    height: 100%;
+                    .col-6 {
+                        width: 100%;
+                        height: 320px;
+                        img {
+                            overflow: visible;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                        }
+                    }
+
+                    .col-6 {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        h3 {
+                            color: white;
+                            font-size: rem;
+                            font-weight: 600;
+                            margin-bottom: 25px;
+                        }
+
+                        p {
+                            color: white;
+                            font-weight: 400;
+                        }
+
+                        .buttons-container {
+                            display: flex;
+                            width: 100%;
+                            height: auto;
+                            .single-button {
+                                width: 180px;
+                                margin-right: 25px;
+                                img {
+                                    object-fit: contain;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Regole CSS per dispositivi con larghezza minima di 600px */
+@media only screen and (min-width: 600px) {
+    .bottom-main {
+        margin-top: 80px;
+        .restaurant-result {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-bottom: 100px;
+            max-width: 90%;
+            .mycardcontainer {
+                width: 100%;
+                margin: 0 8px;
+                margin-bottom: 50px;
+                .myrestaurantcard {
+                    position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                    &:hover img {
+                        transform: scale(1.1);
+                        background: linear-gradient(
+                            to top,
+                            rgba(0, 0, 0, 0.825),
+                            rgba(0, 0, 0, 0)
+                        );
+                    }
+                    &:hover h2 {
+                        display: none;
+                    }
+                    .myrestaurantimg {
+                        border-radius: 15px;
+                        position: relative;
+                        overflow: hidden;
+                        width: 100%;
+                        height: 200px;
+
+                        .color-layer {
+                            position: absolute;
+                            bottom: 0;
+                            top: 0;
+                            width: 100%;
+                            background: linear-gradient(
+                                to top,
+                                rgba(0, 0, 0, 0.825),
+                                rgba(0, 0, 0, 0)
+                            );
+                        }
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                            transition: all 0.5s ease-in;
+                            transition: all 0.2s ease-out;
+                        }
+                    }
+                    .myrestaurantcardbody {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        padding: 16px;
+
+                        h2 {
+                            color: white;
+                            font-size: 1.6rem;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            transition: all 0.3s ease-in-out;
+                        }
+
+                        span {
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            font-size: 0.8rem;
+                            color: white;
+                        }
+                    }
+                }
+
+                .typology-tag {
+                    text-align: end;
+                    span {
+                        font-size: 0.8rem;
+                        padding: 4px 8px;
+                        border-radius: 16px;
+                        background-color: #4e5253;
+                        color: white;
+                        margin: 0 4px;
+                    }
+                }
+            }
+
+            .no-restaurants-found {
+                width: 100%;
+                text-align: center;
+                h3 {
+                    font-weight: 400;
+                    color: #b1b1b1;
+                }
+            }
+
+            .buttons-container {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                button {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 20px;
+                    background-color: transparent;
+                    border: 1px solid rgb(22, 22, 33);
+                    margin: 0 16px;
+                    font-weight: bolder;
+                    font-size: 1.1rem;
+                    transition: all 0.2s ease-in-out;
+                    &.enable {
+                        background-color: rgb(22, 22, 33);
+                        color: white;
+                    }
+                    &.hidden {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        margin-bottom: 220px;
+        .bg {
+            background-color: #2c2f30;
+            .my-container {
+                max-width: 80%;
+                margin: 0 auto;
+                .row {
+                    height: 100%;
+                    .col-6 {
+                        width: 100%;
+                        height: 320px;
+                        img {
+                            overflow: visible;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                        }
+                    }
+
+                    .col-6 {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        h3 {
+                            color: white;
+                            font-size: rem;
+                            font-weight: 600;
+                            margin-bottom: 25px;
+                        }
+
+                        p {
+                            color: white;
+                            font-weight: 400;
+                        }
+
+                        .buttons-container {
+                            display: flex;
+                            width: 100%;
+                            height: auto;
+                            .single-button {
+                                width: 180px;
+                                margin-right: 25px;
+                                img {
+                                    object-fit: contain;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Regole CSS per dispositivi con larghezza minima di 768px */
+@media only screen and (min-width: 768px) {
+    .bottom-main {
+        margin-top: 80px;
+        .restaurant-result {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+            align-items: center;
+            margin: 0 auto;
+            margin-bottom: 100px;
+            max-width: 85%;
+            .mycardcontainer {
+                width: calc(100% / 3 - 24px);
+                margin: 0 12px;
+                margin-bottom: 50px;
+                .myrestaurantcard {
+                    position: relative;
+                    overflow: hidden;
+                    margin-bottom: 8px;
+                    width: 100%;
+                    &:hover img {
+                        transform: scale(1.1);
+                        background: linear-gradient(
+                            to top,
+                            rgba(0, 0, 0, 0.825),
+                            rgba(0, 0, 0, 0)
+                        );
+                    }
+                    &:hover h2 {
+                        display: none;
+                    }
+                    .myrestaurantimg {
+                        border-radius: 15px;
+                        position: relative;
+                        overflow: hidden;
+                        width: 100%;
+                        height: 280px;
+
+                        .color-layer {
+                            position: absolute;
+                            bottom: 0;
+                            top: 0;
+                            width: 100%;
+                            background: linear-gradient(
+                                to top,
+                                rgba(0, 0, 0, 0.825),
+                                rgba(0, 0, 0, 0)
+                            );
+                        }
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                            transition: all 0.5s ease-in;
+                            transition: all 0.2s ease-out;
+                        }
+                    }
+                    .myrestaurantcardbody {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        padding: 16px;
+
+                        h2 {
+                            color: white;
+                            font-size: 1.6rem;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            transition: all 0.3s ease-in-out;
+                        }
+
+                        span {
+                            font-size: 0.8rem;
+                            color: white;
+                        }
+                    }
+                }
+
+                .typology-tag {
+                    text-align: end;
+                    span {
+                        padding: 4px 8px;
+                        border-radius: 16px;
+                        background-color: #4e5253;
+                        color: white;
+                        margin: 0 4px;
+                    }
+                }
+            }
+
+            .no-restaurants-found {
+                width: 100%;
+                text-align: center;
+                h3 {
+                    font-weight: 400;
+                    color: #b1b1b1;
+                }
+            }
+
+            .buttons-container {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                button {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 20px;
+                    background-color: transparent;
+                    border: 1px solid rgb(22, 22, 33);
+                    margin: 0 16px;
+                    font-weight: bolder;
+                    font-size: 1.1rem;
+                    transition: all 0.2s ease-in-out;
+                    &.enable {
+                        background-color: rgb(22, 22, 33);
+                        color: white;
+                    }
+                    &.hidden {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        margin-bottom: 220px;
+        .bg {
+            background-color: #2c2f30;
+            .my-container {
+                max-width: 80%;
+                margin: 0 auto;
+                .row {
+                    height: 100%;
+                    .col-6 {
+                        width: 100%;
+                        height: 320px;
+                        img {
+                            overflow: visible;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                        }
+                    }
+
+                    .col-6 {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        h3 {
+                            color: white;
+                            font-size: rem;
+                            font-weight: 600;
+                            margin-bottom: 25px;
+                        }
+
+                        p {
+                            color: white;
+                            font-weight: 400;
+                        }
+
+                        .buttons-container {
+                            display: flex;
+                            width: 100%;
+                            height: auto;
+                            .single-button {
+                                width: 180px;
+                                margin-right: 25px;
+                                img {
+                                    object-fit: contain;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Regole CSS per dispositivi con larghezza minima di 992px */
+@media only screen and (min-width: 992px) {
+    .bottom-main {
+        margin-top: 80px;
+        .restaurant-result {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+            align-items: center;
+            margin: 0 auto;
+            margin-bottom: 150px;
+            max-width: 80%;
+            .mycardcontainer {
+                width: calc(100% / 3 - 24px);
+                margin: 0 12px;
+                margin-bottom: 50px;
+                .myrestaurantcard {
+                    position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                    &:hover img {
+                        transform: scale(1.1);
+                        background: linear-gradient(
+                            to top,
+                            rgba(0, 0, 0, 0.825),
+                            rgba(0, 0, 0, 0)
+                        );
+                    }
+                    &:hover h2 {
+                        display: none;
+                    }
+                    .myrestaurantimg {
+                        border-radius: 25px;
+                        position: relative;
+                        overflow: hidden;
+                        width: 100%;
+                        height: 200px;
+
+                        .color-layer {
+                            position: absolute;
+                            bottom: 0;
+                            top: 0;
+                            width: 100%;
+                            background: linear-gradient(
+                                to top,
+                                rgba(0, 0, 0, 0.825),
+                                rgba(0, 0, 0, 0)
+                            );
+                        }
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                            transition: all 0.5s ease-in;
+                            transition: all 0.2s ease-out;
+                        }
+                    }
+                    .myrestaurantcardbody {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        padding: 16px;
+
+                        h2 {
+                            color: white;
+                            font-size: 1.6rem;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            transition: all 0.3s ease-in-out;
+                        }
+
+                        span {
+                            color: white;
+                        }
+                    }
+                }
+
+                .typology-tag {
+                    text-align: end;
+                    span {
+                        padding: 4px 8px;
+                        border-radius: 16px;
+                        background-color: #4e5253;
+                        color: white;
+                        margin: 0 4px;
+                    }
+                }
+            }
+
+            .no-restaurants-found {
+                width: 100%;
+                text-align: center;
+                h3 {
+                    font-weight: 400;
+                    color: #b1b1b1;
+                }
+            }
+
+            .buttons-container {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                button {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 20px;
+                    background-color: transparent;
+                    border: 1px solid rgb(22, 22, 33);
+                    margin: 0 16px;
+                    font-weight: bolder;
+                    font-size: 1.1rem;
+                    transition: all 0.2s ease-in-out;
+                    &.enable {
+                        background-color: rgb(22, 22, 33);
+                        color: white;
+                    }
+                    &.hidden {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        margin-bottom: 220px;
+        .bg {
+            background-color: #2c2f30;
+            .my-container {
+                max-width: 80%;
+                margin: 0 auto;
+                .row {
+                    height: 100%;
+                    .col-6 {
+                        width: 50%;
+                        height: 370px;
+                        img {
+                            overflow: visible;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                        }
+                    }
+
+                    .col-6 {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        h3 {
+                            color: white;
+                            font-size: rem;
+                            font-weight: 600;
+                            margin-bottom: 25px;
+                        }
+
+                        p {
+                            color: white;
+                            font-weight: 400;
+                        }
+
+                        .buttons-container {
+                            display: flex;
+                            width: 100%;
+                            height: auto;
+                            .single-button {
+                                width: 180px;
+                                margin-right: 25px;
+                                img {
+                                    object-fit: contain;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Regole CSS per dispositivi con larghezza minima di 1200px */
+@media only screen and (min-width: 1200px) {
+    .bottom-main {
+        margin-top: 80px;
+        .restaurant-result {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-bottom: 150px;
+            max-width: 80%;
+            .mycardcontainer {
+                width: calc(100% / 4);
+                margin: 0 24px;
+                margin-bottom: 50px;
+                .myrestaurantcard {
+                    position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                    &:hover img {
+                        transform: scale(1.1);
+                        background: linear-gradient(
+                            to top,
+                            rgba(0, 0, 0, 0.825),
+                            rgba(0, 0, 0, 0)
+                        );
+                    }
+                    &:hover h2 {
+                        display: none;
+                    }
+                    .myrestaurantimg {
+                        border-radius: 25px;
+                        position: relative;
+                        overflow: hidden;
+                        width: 100%;
+                        height: 280px;
+
+                        .color-layer {
+                            position: absolute;
+                            bottom: 0;
+                            top: 0;
+                            width: 100%;
+                            background: linear-gradient(
+                                to top,
+                                rgba(0, 0, 0, 0.825),
+                                rgba(0, 0, 0, 0)
+                            );
+                        }
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                            transition: all 0.5s ease-in;
+                            transition: all 0.2s ease-out;
+                        }
+                    }
+                    .myrestaurantcardbody {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        padding: 20px;
+
+                        h2 {
+                            color: white;
+                            font-size: 1.6rem;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            transition: all 0.3s ease-in-out;
+                        }
+
+                        span {
+                            color: white;
+                        }
+                    }
+                }
+
+                .typology-tag {
+                    text-align: end;
+                    span {
+                        padding: 4px 8px;
+                        border-radius: 16px;
+                        background-color: #4e5253;
+                        color: white;
+                        margin: 0 4px;
+                    }
+                }
+            }
+
+            .no-restaurants-found {
+                width: 100%;
+                text-align: center;
+                h3 {
+                    font-weight: 400;
+                    color: #b1b1b1;
+                }
+            }
+
+            .buttons-container {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                button {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 20px;
+                    background-color: transparent;
+                    border: 1px solid rgb(22, 22, 33);
+                    margin: 0 16px;
+                    font-weight: bolder;
+                    font-size: 1.1rem;
+                    transition: all 0.2s ease-in-out;
+                    &.enable {
+                        background-color: rgb(22, 22, 33);
+                        color: white;
+                    }
+                    &.hidden {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        margin-bottom: 220px;
+        .bg {
+            background-color: #2c2f30;
+            .my-container {
+                max-width: 80%;
+                margin: 0 auto;
+                .row {
+                    height: 100%;
+                    .col-6 {
+                        height: 370px;
+                        img {
+                            overflow: visible;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                        }
+                    }
+
+                    .col-6 {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        h3 {
+                            color: white;
+                            font-size: 2rem;
+                            font-weight: 600;
+                            margin-bottom: 25px;
+                        }
+
+                        p {
+                            color: white;
+                            font-weight: 400;
+                        }
+
+                        .buttons-container {
+                            display: flex;
+                            width: 100%;
+                            height: auto;
+                            .single-button {
+                                width: 180px;
+                                margin-right: 25px;
+                                img {
+                                    object-fit: contain;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .bottom-main {
+        margin-top: 150px;
+        .restaurant-result {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            min-height: 700px;
+            margin-bottom: 100px;
+            max-width: 80%;
+            .mycardcontainer {
+                width: calc(100% / 4);
+                margin: 0 24px;
+                margin-bottom: 50px;
+                .myrestaurantcard {
+                    position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                    &:hover img {
+                        transform: scale(1.1);
+                        background: linear-gradient(
+                            to top,
+                            rgba(0, 0, 0, 0.825),
+                            rgba(0, 0, 0, 0)
+                        );
+                    }
+                    &:hover h2 {
+                        display: none;
+                    }
+                    .myrestaurantimg {
+                        border-radius: 25px;
+                        position: relative;
+                        overflow: hidden;
+                        width: 100%;
+                        height: 280px;
+
+                        .color-layer {
+                            position: absolute;
+                            bottom: 0;
+                            top: 0;
+                            width: 100%;
+                            background: linear-gradient(
+                                to top,
+                                rgba(0, 0, 0, 0.825),
+                                rgba(0, 0, 0, 0)
+                            );
+                        }
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                            transition: all 0.5s ease-in;
+                            transition: all 0.2s ease-out;
+                        }
+                    }
+                    .myrestaurantcardbody {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        padding: 16px;
+                        h2 {
+                            color: white;
+                            font-size: 1.6rem;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            transition: all 0.3s ease-in-out;
+                        }
+                        span {
+                            color: white;
+                            //white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
+
+                .typology-tag {
+                    text-align: end;
+                    span {
+                        padding: 4px 8px;
+                        border-radius: 16px;
+                        background-color: #4e5253;
+                        color: white;
+                        margin: 0 4px;
+                    }
+                }
+            }
+
+            .no-restaurants-found {
+                width: 100%;
+                text-align: center;
+                h3 {
+                    //text-transform: uppercase;
+                    font-weight: 400;
+                    color: #b1b1b1;
+                }
+            }
+
+            .buttons-container {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                button {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 20px;
+                    background-color: transparent;
+                    border: 1px solid rgb(22, 22, 33);
+                    margin: 0 16px;
+                    font-weight: bolder;
+                    font-size: 1.1rem;
+                    transition: all 0.2s ease-in-out;
+                    &.enable {
+                        background-color: rgb(22, 22, 33);
+                        color: white;
+                    }
+                    &.hidden {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        margin-bottom: 220px;
+        .bg {
+            background-color: #2c2f30;
+            .my-container {
+                max-width: 80%;
+                margin: 0 auto;
+                .row {
+                    height: 100%;
+                    .col-6 {
+                        height: 350px;
+                        img {
+                            overflow: visible;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                        }
+                    }
+
+                    .col-6 {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        h3 {
+                            color: white;
+                            font-size: 2rem;
+                            font-weight: 600;
+                            margin-bottom: 25px;
+                        }
+
+                        p {
+                            color: white;
+                            font-weight: 400;
+                        }
+
+                        .buttons-container {
+                            display: flex;
+                            justify-content: center;
+                            width: 100%;
+                            height: auto;
+                            .single-button {
+                                width: 200px;
+                                margin-right: 25px;
+                                img {
+                                    object-fit: contain;
+                                    width: 100%;
+                                    height: 80px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
